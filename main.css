@@ -91,7 +91,8 @@ footer i {
 }
 @media (max-width: 767px) {
   .main-box {
-    width: 350px;
+    width: 300px;
+    padding: 5px;
   }
   .main-box p {
     margin-bottom: 30px;
