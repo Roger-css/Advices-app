@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --Grayish-Blue: hsl(217, 19%, 38%);
+  --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+  --Dark-Blue: hsl(218, 23%, 16%);
+  --Light-Cyan: hsl(193, 38%, 86%);
+  --Neon-Green: hsl(150, 100%, 66%);
+}
+body {
+  background-color: var(--Dark-Blue);
+  padding: 0;
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+}
+.main-box {
+  background-color: var(--Dark-Grayish-Blue);
+  height: fit-content;
+  width: 400px;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  border-radius: 10px;
+  padding: 7px;
+}
+h6 {
+  color: var(--Neon-Green);
+  font-weight: 200;
+  font-size: 17px;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+.main-box p {
+  color: var(--Light-Cyan);
+  font-weight: 800;
+}
+.svgHolder {
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+.main-box svg {
+  transform: translateX(-23px);
+  margin: 20px auto 40px;
+}
+.svgHolder i {
+  display: none;
+  font-size: 30px;
+  color: var(--Light-Cyan);
+}
+.main-box .dot {
+  position: absolute;
+  background-color: var(--Neon-Green);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  left: 50%;
+  bottom: -50px;
+  transform: translate(-35%, -50%);
+}
+.main-box .dot:hover {
+  box-shadow: 0px 0px 20px var(--Neon-Green);
+}
+.dot svg {
+  position: absolute;
+  left: 50%;
+  bottom: -40px;
+  transform: translate(-50%, -50%);
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.attribution {
+  color: white;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(188, 45%, 44%);
+  text-decoration: none;
+}
+@media (max-width: 767px) {
+  .main-box {
+    width: 350px;
+  }
+  .main-box p {
+    margin-bottom: 30px;
+  }
+  .svgHolder {
+    position: relative;
+    height: 30px;
+    margin-bottom: 30px;
+  }
+  .svgHolder::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 0.5px;
+    z-index: -2;
+    background-color: var(--Light-Cyan);
+  }
+  .svgHolder::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 10px;
+    z-index: -1;
+    transform: translate(-50%);
+    background-color: var(--Dark-Grayish-Blue);
+  }
+  .svgHolder svg {
+    display: none;
+  }
+  .svgHolder i {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+  }
+  .main-box .dot {
+    transform: translate(-50%, -50%);
+  }
+}
